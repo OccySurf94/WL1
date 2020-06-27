@@ -12,3 +12,16 @@ local Whitelisted = {
 	361467, -- 9MT6
 	161805898 -- Doom
 }
+
+local player = game.Players.LocalPlayer
+local UserId  = player.UserId
+
+for i,v in pairs(TEST) do
+	if v == UserId then
+		print("Success!")
+	end
+	if not table.find(Whitelisted, UserId) then
+		player:Kick("You are not Whitelisted! DM Yoda#1342 for help.")
+		wait(9999)
+	end
+end
