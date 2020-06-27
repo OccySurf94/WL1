@@ -16,7 +16,7 @@ local Whitelisted = {
 local player = game.Players.LocalPlayer
 local UserId  = player.UserId
 
-for i,v in pairs(TEST) do
+for i,v in pairs(Whitelisted) do
 	if v == UserId then
 		print("Success!")
 	end
